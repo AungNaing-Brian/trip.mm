@@ -1,0 +1,12 @@
+{
+    "trips" : [
+        {
+            "name" : "3 nights in Ching Mai",
+            "price" : 100
+    },
+    {
+        "name" : "2 nights in Bangkok",
+        "price" : 120
+    }
+    ]
+}
