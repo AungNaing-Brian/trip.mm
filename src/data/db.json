@@ -2,11 +2,13 @@
     "trips" : [
         {
             "name" : "3 nights in Ching Mai",
-            "price" : 100
+            "price" : 100,
+            "id" : 1
     },
     {
         "name" : "2 nights in Bangkok",
-        "price" : 120
+        "price" : 120,
+        "id" : 2
     }
     ]
 }
