@@ -2,13 +2,27 @@
     "trips" : [
         {
             "name" : "3 nights in Ching Mai",
-            "price" : 100,
+            "price" : 600000,
+            "location" : "Thailand",
             "id" : 1
     },
     {
         "name" : "2 nights in Bangkok",
-        "price" : 120,
+        "price" : 620000,
+        "location" : "Thailand",
         "id" : 2
+    },
+    {
+        "name" : "2 nights in Bagan",
+        "price" : 120000,
+        "location" : "Myanmar",
+        "id" : 3
+    },
+    {
+        "name" : "2 nights in ChoungThar",
+        "price" : 120000,
+        "location" : "Myanmar",
+        "id" : 4
     }
     ]
 }
