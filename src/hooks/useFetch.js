@@ -1,6 +1,6 @@
-import { useEffect,useState } from "react";
+import { useEffect,useRef,useState } from "react";
 
-function useFetch(url){
+function useFetch(url , _options){
     //Fetch->first render->use Effect
     //Fetch->dynamic->url
     //Fetch->api's data
@@ -8,8 +8,12 @@ function useFetch(url){
     let [data,setData] = useState(null);
     let [error,setError] = useState(null);
     let [loading,setLoading] = useState(null);
+    // let [options,setOptions] = useState(_options); //obj->refrence
+    let options = useRef(_options).current;
 
     useEffect(()=>{
+        // console.log(name)
+        console.log(options)
         let abortController = new AbortController();
         let signal = abortController.signal;
         setLoading(true);
@@ -34,7 +38,8 @@ function useFetch(url){
             abortController.abort();
         }
     }
-    ,[url])
+    // ,[url,name])
+    ,[url,options])
 
     return {data, loading, error};
 }
