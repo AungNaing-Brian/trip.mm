@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect,useRef,useState } from "react";
 
 function useFetch(url , _options){
     //Fetch->first render->use Effect
@@ -8,7 +8,8 @@ function useFetch(url , _options){
     let [data,setData] = useState(null);
     let [error,setError] = useState(null);
     let [loading,setLoading] = useState(null);
-    let [options,setOptions] = useState(_options);
+    // let [options,setOptions] = useState(_options); //obj->refrence
+    let options = useRef(_options).current;
 
     useEffect(()=>{
         // console.log(name)
