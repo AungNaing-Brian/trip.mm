@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 
-function useFetch(url){
+function useFetch(url , name){
     //Fetch->first render->use Effect
     //Fetch->dynamic->url
     //Fetch->api's data
@@ -10,6 +10,7 @@ function useFetch(url){
     let [loading,setLoading] = useState(null);
 
     useEffect(()=>{
+        console.log(name)
         let abortController = new AbortController();
         let signal = abortController.signal;
         setLoading(true);
@@ -34,7 +35,7 @@ function useFetch(url){
             abortController.abort();
         }
     }
-    ,[url])
+    ,[url,name])
 
     return {data, loading, error};
 }
