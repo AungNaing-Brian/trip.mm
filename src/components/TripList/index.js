@@ -5,7 +5,8 @@ import useFetch from "../../hooks/useFetch";
 export default function Index() {
     
     let [url, setUrl] = useState("http://localhost:3001/trips");
-    let {data:trips, loading, error} = useFetch(url , 'Brian');
+    // let {data:trips, loading, error} = useFetch(url , 'Brian');
+    let {data:trips, loading, error} = useFetch(url , { type : 'get'});
     
 
     return (
